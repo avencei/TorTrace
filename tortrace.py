@@ -14,12 +14,12 @@ url = 'http://httpbin.org/ip'
 r = requests.get(url, proxies=proxies)
 print(r.text)
 
-abc = "abcdefghijklmnopqrstuvwxyz1234567"
+abc = "abcdefghijklmnopqrstuvwxyz1234567" # TOR urls are 16 characters and contain mumbers 1-7
 onion_address = ["http://3g2upl4pq6kufc4m.onion/"]
 try:
     random_shit = int(input("How many URLs do you want to generate?\n> "))
 except ValueError:
-    print("You most likely entered a string")
+    print("You most likely entered a string.")
 
 def random_link():
     global onion_address
@@ -29,9 +29,9 @@ def random_link():
             rand_char = abc[randint(2,32)]
             link  = link +  rand_char
         #onion_address.append("http://"+link+".onion")
-        onion_address.append("http://ghfg.onion/")
+        onion_address.append("http://test.onion/")
 
-random_link()
+random_link() # Generate random url
 
 def check_url():
     for url in onion_address:
@@ -42,4 +42,4 @@ def check_url():
         
 
 
-check_url()
+check_url() # attempts to retrieve web status code
