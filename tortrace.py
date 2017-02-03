@@ -1,6 +1,7 @@
 # Tor Trace 
 # 
 # By Avencei and Riddle
+# Again massive props to Riddle for tons of help.
 
 from random import randint
 import requests
